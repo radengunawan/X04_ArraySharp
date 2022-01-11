@@ -46,16 +46,42 @@ namespace X04_ArraySharp
 
 
 
-
+    // BEGIN of Main Class
     class Program
     {
-
         static void Main(string[] args)
-        {
+        {    //---------START AFTER THIS LINE-------------START AFTER THIS LINE------------START AFTER THIS LINE--------------------
 
-            //START HERE
-            Console.WriteLine("Hello World!");
-        }
+            Gajah[] list1 = new Gajah[7];
 
-    } //end of Main program
-} //end of namespace
+
+            list1[0] = new Gajah() { Name = "Lloyd", EarSize = 40 };
+            list1[1] = new Gajah() { Name = "Lucinda", EarSize = 33 };
+            list1[2] = new Gajah() { Name = "Larry", EarSize = 42 };
+            list1[3] = new Gajah() { Name = "Lucille", EarSize = 32 };
+            list1[4] = new Gajah() { Name = "Lars", EarSize = 44 };
+            list1[5] = new Gajah() { Name = "Linda", EarSize = 37 };
+            list1[6] = new Gajah() { Name = "Humphrey", EarSize = 45 };
+
+            Gajah telingaPalingGede = list1[0];
+            
+            for (int i = 1; i < list1.Length; i++)
+            {
+                Console.WriteLine("Iteration #" + i);
+                if (list1[i].EarSize > telingaPalingGede.EarSize)
+                {
+                    telingaPalingGede = list1[i];
+                }
+                Console.WriteLine(telingaPalingGede.EarSize.ToString());
+            }
+        
+
+
+
+
+
+        // ----DO NOT WRITE BEYOND THIS LINE-----------DON'T WRITE BEYOND THIS LINE-------DO NOT WRITE BEYOND THIS LINE------------
+    }// END of Main program
+
+} //END of Main class
+} //END of namespace
