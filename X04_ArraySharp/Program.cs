@@ -83,25 +83,28 @@ namespace X04_ArraySharp
             }
 
             Console.WriteLine("\nPress available index of sender and receiver");
-            
+
+
+            //while (true) 
+            //{ 
             Console.Write("\nSender index: ");
             char sender = Console.ReadKey(true).KeyChar;
-            int sender_index = (int)sender;
+            int sender_index = (int)sender -48;
 
             Console.Write("\nReceiver index: ");
             char receiver = Console.ReadKey(true).KeyChar;
-            int receiver_index = (int)receiver;
+            int receiver_index = (int)receiver - 48;
 
 
+            Gajah pengirim = list1 [sender_index];
+            Gajah penerima = list1[receiver_index];
+
+                pengirim.ngomongKe(penerima);
+                //Console.WriteLine();
+            //}
 
 
-
-
-
-
-
-
-            // ----DO NOT WRITE BEYOND THIS LINE-----------DON'T WRITE BEYOND THIS LINE-------DO NOT WRITE BEYOND THIS LINE------------
+            // ---- DON'T WRITE BEYOND THIS LINE------------
         }// END of Main program
 
 } //END of Main class
