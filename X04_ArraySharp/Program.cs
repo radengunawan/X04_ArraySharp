@@ -85,15 +85,32 @@ namespace X04_ArraySharp
             Console.WriteLine("\nPress available index of sender and receiver");
 
 
-            //while (true) 
-            //{ 
-            Console.Write("\nSender index: ");
-            char sender = Console.ReadKey(true).KeyChar;
-            int sender_index = (int)sender -48;
+            bool status = true;
+            while (status == true) 
+            {
+                Console.Write("\nSender index: ");
+                char sender = Console.ReadKey(true).KeyChar;
+                int sender_index = (int)sender - 48;
+                Console.WriteLine("You choose " + sender_index.ToString() + " as sender"); //<--Must, since C# not show while we input
 
-            Console.Write("\nReceiver index: ");
-            char receiver = Console.ReadKey(true).KeyChar;
-            int receiver_index = (int)receiver - 48;
+                if (sender_index > list1.Length)
+                {
+                    Console.WriteLine("Invalid value");
+                    status = false;
+                    break;
+                }
+
+                Console.Write("\nReceiver index: ");
+                char receiver = Console.ReadKey(true).KeyChar;
+                int receiver_index = (int)receiver - 48;
+                Console.WriteLine("You choose " + receiver_index.ToString() + " as receiver"); //<--Must, since C# not show while we input
+
+                if (receiver_index >= list1.Length)
+                {
+                    Console.WriteLine("Invalid value");
+                    status = false;
+                    break;
+                }
 
 
             Gajah pengirim = list1 [sender_index];
@@ -101,7 +118,7 @@ namespace X04_ArraySharp
 
                 pengirim.ngomongKe(penerima);
                 //Console.WriteLine();
-            //}
+            }
 
 
             // ---- DON'T WRITE BEYOND THIS LINE------------
