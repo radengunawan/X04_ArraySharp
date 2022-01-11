@@ -74,14 +74,24 @@ namespace X04_ArraySharp
                 }
                 Console.WriteLine(telingaPalingGede.EarSize.ToString());
             }
-        
+
+            int j = 0;
+           foreach (var item in list1)
+            {
+                Console.WriteLine("Index = "+ j.ToString()+" | "+item.Name+" | "+item.EarSize.ToString());
+                j++;
+            }
+
+            //char input = Console.ReadKey(true).KeyChar;
 
 
 
 
 
-        // ----DO NOT WRITE BEYOND THIS LINE-----------DON'T WRITE BEYOND THIS LINE-------DO NOT WRITE BEYOND THIS LINE------------
-    }// END of Main program
+
+
+            // ----DO NOT WRITE BEYOND THIS LINE-----------DON'T WRITE BEYOND THIS LINE-------DO NOT WRITE BEYOND THIS LINE------------
+        }// END of Main program
 
 } //END of Main class
 } //END of namespace
