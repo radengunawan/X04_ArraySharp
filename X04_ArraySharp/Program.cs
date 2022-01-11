@@ -82,7 +82,18 @@ namespace X04_ArraySharp
                 j++;
             }
 
-            //char input = Console.ReadKey(true).KeyChar;
+            Console.WriteLine("\nPress available index of sender and receiver");
+            
+            Console.Write("\nSender index: ");
+            char sender = Console.ReadKey(true).KeyChar;
+            int sender_index = (int)sender;
+
+            Console.Write("\nReceiver index: ");
+            char receiver = Console.ReadKey(true).KeyChar;
+            int receiver_index = (int)receiver;
+
+
+
 
 
 
